@@ -7,9 +7,9 @@ export const HeaderComponent = () => {
     return (
         <header>
             <div className='social__Links'>
-                <a href='#' target={"_blank"}><FaGithubSquare color='black' size={60} /></a>
-                <a href='#' target={"_blank"}><FaLinkedin color='blue' size={60} /></a>
-                <a><AiOutlineMail color='black' size={60} /></a>
+                <a href='https://github.com/yacdanyCR' target={"_blank"} rel="noreferrer"><FaGithubSquare color='black' size={60} /></a>
+                <a href='https://www.linkedin.com/in/yacdany-arguedas-mora-22592b211/' target={"_blank"} rel="noreferrer"><FaLinkedin color='blue' size={60} /></a>
+                <a href='https://github.com/yacdanyCR/yacdanyCR/blob/main/jack20-21@hotmail.com'><AiOutlineMail color='black' size={60} /></a>
             </div>
         </header>
     )
