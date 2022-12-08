@@ -11,6 +11,7 @@
     width: 350px;
     text-align: center;
     font-style: oblique;
+    font-size: 1.5rem;
 }
 
 .task__Title .task__input {
