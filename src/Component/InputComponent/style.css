@@ -1,0 +1,14 @@
+.task__Section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.task__Title {
+    background-color: lavender;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 350px;
+    text-align: center;
+    font-style: oblique;
+}
