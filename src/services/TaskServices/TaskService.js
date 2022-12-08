@@ -11,6 +11,19 @@ const getTasks = async (setTask) => {
     }
 }
 
+const addTask = async (task) => {
+    try {
+        axios.post("http://localhost:3000/api/task", {
+            task
+        })
+            .then((response) => {
+                window.location.href = "/";
+            })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const deleteTask = async (id) => {
     try {
         await axios.delete(`http://localhost:3000/api/task/${id}`)
@@ -24,5 +37,6 @@ const deleteTask = async (id) => {
 
 export {
     getTasks,
-    deleteTask
+    deleteTask,
+    addTask
 }
