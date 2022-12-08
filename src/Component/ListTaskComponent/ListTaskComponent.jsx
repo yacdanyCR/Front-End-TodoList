@@ -5,10 +5,10 @@ import './style.css'
 
 export const ListTaskComponent = (props) => {
     return (
-        <div className='task_list' style={{ backgroundColor: `${randColor()}` }}>
+        <div className='task_list' style={{ backgroundColor: `${randColor()}` }} key={props.index}>
             <input type="checkbox" id="scales" name="scales" ></input>
-            <label htmlFor="task">Learn a new language</label>
-            <TiDelete size={30} color={"red"} onClick={() => alert("Eliminaste")} />
+            <label htmlFor="task">{props.task}</label>
+            <TiDelete size={30} color={"red"} onClick={() => alert("Eliminaste")} id={props.id} />
         </div>
     )
 }
