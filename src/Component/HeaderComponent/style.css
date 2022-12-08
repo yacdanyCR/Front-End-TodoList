@@ -1,0 +1,9 @@
+header .social__Links {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.social__Links>a {
+    margin-left: 2rem;
+}
