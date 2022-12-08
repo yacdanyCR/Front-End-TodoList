@@ -10,6 +10,7 @@ export const ShowingListTask = () => {
                 <ListTaskComponent />
                 <ListTaskComponent />
                 <ListTaskComponent />
+                <ListTaskComponent />
             </div>
 
         </section>
