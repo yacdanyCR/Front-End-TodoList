@@ -17,7 +17,7 @@
 .task__Title .task__input {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .task__input>input {
@@ -25,6 +25,7 @@
     border-radius: 10px;
     padding: 5px;
     width: 250px;
+    height: 20px;
 }
 
 svg {
