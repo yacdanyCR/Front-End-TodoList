@@ -11,6 +11,18 @@ const getTasks = async (setTask) => {
     }
 }
 
+const deleteTask = async (id) => {
+    try {
+        await axios.delete(`http://localhost:3000/api/task/${id}`)
+            .then(() => {
+                window.location.href = "/";
+            });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export {
-    getTasks
+    getTasks,
+    deleteTask
 }
