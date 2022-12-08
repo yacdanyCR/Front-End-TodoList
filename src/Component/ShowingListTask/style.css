@@ -3,4 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #eeee;
 }
