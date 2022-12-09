@@ -17,7 +17,7 @@ const addTask = async (task) => {
             task
         })
             .then((response) => {
-                window.location.href = "/";
+                window.location.reload();
             })
     } catch (error) {
         console.log(error);
@@ -28,7 +28,7 @@ const deleteTask = async (id) => {
     try {
         await axios.delete(`https://back-end-todolist-production.up.railway.app/api/task/${id}`)
             .then(() => {
-                window.location.href = "/";
+                window.location.reload();
             });
     } catch (error) {
         console.log(error)
@@ -44,7 +44,7 @@ const addCompleted = async (id, completed) => {
             completed
         })
             .then(() => {
-                window.location.href = "/"
+                window.location.reload();
             })
     } catch (error) {
         console.log(error)
