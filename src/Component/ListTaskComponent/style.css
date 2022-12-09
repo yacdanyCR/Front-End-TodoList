@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*  background-color: bisque; */
     padding: 1rem;
     margin: 1rem;
     border-radius: 10px;
@@ -11,4 +10,8 @@
 
 .task_list>input {
     margin: 1rem;
+}
+
+.task_Completed {
+    text-decoration: line-through;
 }
