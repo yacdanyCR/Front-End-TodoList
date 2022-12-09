@@ -15,7 +15,7 @@ export const ShowingListTask = () => {
             <div className="showing__Task">
                 {Tasks.map((el, index) => {
                     return (
-                        <ListTaskComponent task={el.task} id={el.id} key={index} />
+                        <ListTaskComponent task={el.task} id={el.id} key={index} completeded={el.completeded} />
                     )
                 })}
             </div>
