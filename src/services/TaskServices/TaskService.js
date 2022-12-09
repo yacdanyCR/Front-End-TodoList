@@ -2,7 +2,7 @@ import axios from "axios"
 
 const getTasks = async (setTask) => {
     try {
-        await axios.get("http://localhost:3000/api/task")
+        await axios.get("https://back-end-todolist-production.up.railway.app/api/task")
             .then((json) => {
                 setTask(json.data);
             })
@@ -13,7 +13,7 @@ const getTasks = async (setTask) => {
 
 const addTask = async (task) => {
     try {
-        axios.post("http://localhost:3000/api/task", {
+        axios.post("https://back-end-todolist-production.up.railway.app/api/task", {
             task
         })
             .then((response) => {
@@ -26,7 +26,7 @@ const addTask = async (task) => {
 
 const deleteTask = async (id) => {
     try {
-        await axios.delete(`http://localhost:3000/api/task/${id}`)
+        await axios.delete(`https://back-end-todolist-production.up.railway.app/api/task/${id}`)
             .then(() => {
                 window.location.href = "/";
             });
@@ -39,7 +39,7 @@ const deleteTask = async (id) => {
 const addCompleted = async (id, completed) => {
     try {
         completed === true ? completed = 1 : completed = 0
-        axios.patch("http://localhost:3000/api/task", {
+        axios.patch("https://back-end-todolist-production.up.railway.app/api/task", {
             id,
             completed
         })
