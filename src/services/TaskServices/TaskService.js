@@ -35,8 +35,25 @@ const deleteTask = async (id) => {
     }
 }
 
+
+const addCompleted = async (id, completed) => {
+    try {
+        completed === true ? completed = 1 : completed = 0
+        axios.patch("http://localhost:3000/api/task", {
+            id,
+            completed
+        })
+            .then(() => {
+                window.location.href = "/"
+            })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export {
     getTasks,
     deleteTask,
-    addTask
+    addTask,
+    addCompleted
 }
