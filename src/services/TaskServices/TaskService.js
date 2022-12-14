@@ -13,12 +13,9 @@ const getTasks = async (setTask) => {
 
 const addTask = async (task) => {
     try {
-        axios.post("https://back-end-todolist-production.up.railway.app/api/task", {
+        await axios.post("https://back-end-todolist-production.up.railway.app/api/task", {
             task
         })
-            .then((response) => {
-                window.location.reload();
-            })
     } catch (error) {
         console.log(error);
     }
@@ -26,10 +23,7 @@ const addTask = async (task) => {
 
 const deleteTask = async (id) => {
     try {
-        await axios.delete(`https://back-end-todolist-production.up.railway.app/api/task/${id}`)
-            .then(() => {
-                window.location.reload();
-            });
+        await axios.delete(`https://back-end-todolist-production.up.railway.app/api/task/${id}`);
     } catch (error) {
         console.log(error)
     }
@@ -39,7 +33,7 @@ const deleteTask = async (id) => {
 const addCompleted = async (id, completed) => {
     try {
         completed === true ? completed = 1 : completed = 0
-        axios.patch("https://back-end-todolist-production.up.railway.app/api/task", {
+        await axios.patch("https://back-end-todolist-production.up.railway.app/api/task", {
             id,
             completed
         })

@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './style.css'
 import { FcPlus } from "react-icons/fc";
-import { addTask } from '../../services/TaskServices/TaskService';
+import { addTask, getTasks } from '../../services/TaskServices/TaskService';
+import { TaskContext } from '../../Context/TaskContext';
 
 export const InputComponent = () => {
-    const [task, setTask] = useState("");
+    const [task, setNewTask] = useState("");
+    const { setTasks } = useContext(TaskContext);
+
+    const handleSubmit = async () => {
+        await addTask(task);
+        await getTasks(setTasks);
+    }
 
     return (
         <section>
@@ -13,8 +20,8 @@ export const InputComponent = () => {
                     <div className="task__Title">
                         <h3>What is in your mind?</h3>
                         <div className="task__input">
-                            <input type="text" onChange={(e) => setTask(e.target.value)} />
-                            <FcPlus size={45} onClick={() => addTask(task)} />
+                            <input id='input' type="text" onChange={(e) => setNewTask(e.target.value)} />
+                            <FcPlus size={45} onClick={() => handleSubmit()} />
                         </div>
                     </div>
                 </div>

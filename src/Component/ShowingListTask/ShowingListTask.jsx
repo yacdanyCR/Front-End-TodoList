@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { getTasks } from '../../services/TaskServices/TaskService'
+import React, { useContext } from 'react'
+import { TaskContext } from '../../Context/TaskContext'
 import ListTaskComponent from '../ListTaskComponent/ListTaskComponent'
 import LoaderComponent from '../LoaderComponent/LoaderComponent'
 import './style.css'
 
 export const ShowingListTask = () => {
-    const [Tasks, setTasks] = useState([]);
-
-    useEffect(() => {
-        getTasks(setTasks);
-    }, []);
-
+    const { Tasks } = useContext(TaskContext);
     return (
         <section>
             <div className="showing__Task">
@@ -22,7 +17,6 @@ export const ShowingListTask = () => {
                         )
                     })
                 }
-
             </div>
 
         </section>
