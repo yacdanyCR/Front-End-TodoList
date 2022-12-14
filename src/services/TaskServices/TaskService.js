@@ -36,10 +36,7 @@ const addCompleted = async (id, completed) => {
         await axios.patch("https://back-end-todolist-production.up.railway.app/api/task", {
             id,
             completed
-        })
-            .then(() => {
-                window.location.reload();
-            })
+        });
     } catch (error) {
         console.log(error)
     }
